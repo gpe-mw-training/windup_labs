@@ -1,0 +1,44 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <!-- Default local maven repository is ~/.m2/repository
+         If you want your local maven repository to reside somewhere on disk, then uncomment and modifiy this next line
+  <localRepository>/u02/maven/defaultrepo</localRepository> -->
+
+  
+  <profiles>
+    <profile>
+      <id>jboss-org-releases</id>
+      <repositories>
+        <repository>
+          <id>jboss-org-releases</id>
+          <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>jboss-org-releases-repository</id>
+          <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>jboss-org-releases</activeProfile>
+  </activeProfiles>
+
+</settings>
